@@ -1,1 +1,1 @@
-A simple Docker image containing a simple environment for node projects.
+A simple Docker image containing a simple [environment](./shell.nix) for node projects.
