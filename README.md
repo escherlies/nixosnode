@@ -1,0 +1,1 @@
+A simple Docker image containing a simple environment for node projects.
