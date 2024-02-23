@@ -2,8 +2,11 @@ FROM nixos/nix:latest
 
 USER root
 
-COPY shell.nix /shell.nix
+RUN nix-channel --update
 
-RUN nix-shell /shell.nix
+RUN nix-env -iA nixpkgs.fish
+RUN nix-env -iA nixpkgs.just
+RUN nix-env -iA nixpkgs.nodejs_20
+RUN nix-env -iA nixpkgs.git
 
-CMD ["nix-shell", "/shell.nix"]
+CMD ["fish"]
